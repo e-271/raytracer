@@ -1,0 +1,282 @@
+# depslib dependency file v1.0
+1457802460 source:/home/kodomo/workspace/OpenGL/raytracer/main.cpp
+	<iostream>
+	<Primitive.h>
+	"Scene.h"
+	<FreeImage.h>
+	<string>
+
+1457802801 source:/home/kodomo/workspace/OpenGL/raytracer/src/Primitive.cpp
+	"Primitive.h"
+
+1457802482 /home/kodomo/workspace/OpenGL/raytracer/include/Primitive.h
+	"variables.h"
+	"Ray.h"
+
+1454022508 /home/kodomo/workspace/OpenGL/raytracer/include/Transforms.h
+	"variables.h"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/glm.hpp
+	"core/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	"core/setup.hpp"
+	"./core/_detail.hpp"
+	"./core/type.hpp"
+	"./core/func_trigonometric.hpp"
+	"./core/func_exponential.hpp"
+	"./core/func_common.hpp"
+	"./core/func_packing.hpp"
+	"./core/func_geometric.hpp"
+	"./core/func_matrix.hpp"
+	"./core/func_vector_relational.hpp"
+	"./core/func_integer.hpp"
+	"./core/func_noise.hpp"
+	"./core/_swizzle.hpp"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/_fixes.hpp
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/setup.hpp
+	<immintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/_detail.hpp
+	"setup.hpp"
+	<cassert>
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type.hpp
+	"type_half.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_gentype.hpp"
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat2x2.hpp"
+	"type_mat2x3.hpp"
+	"type_mat2x4.hpp"
+	"type_mat3x2.hpp"
+	"type_mat3x3.hpp"
+	"type_mat3x4.hpp"
+	"type_mat4x2.hpp"
+	"type_mat4x3.hpp"
+	"type_mat4x4.hpp"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_half.hpp
+	<cstdlib>
+	"type_half.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_half.inl
+	"_detail.hpp"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_float.hpp
+	"type_half.hpp"
+	"setup.hpp"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_int.hpp
+	"setup.hpp"
+	"_detail.hpp"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_gentype.hpp
+	"type_size.hpp"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_size.hpp
+	<cstdlib>
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec1.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec1.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec.hpp
+	"type_gentype.hpp"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/_swizzle.hpp
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec1.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec2.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec2.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec2.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec3.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec3.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec3.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec4.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec4.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_vec4.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat2x2.hpp
+	"type_mat.hpp"
+	"type_mat2x2.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat.hpp
+	"type_gentype.hpp"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat2x2.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat2x3.hpp
+	"type_mat.hpp"
+	"type_mat2x3.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat2x3.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat2x4.hpp
+	"type_mat.hpp"
+	"type_mat2x4.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat2x4.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat3x2.hpp
+	"type_mat.hpp"
+	"type_mat3x2.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat3x2.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat3x3.hpp
+	"type_mat.hpp"
+	"type_mat3x3.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat3x3.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat3x4.hpp
+	"type_mat.hpp"
+	"type_mat3x4.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat3x4.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat4x2.hpp
+	"type_mat.hpp"
+	"type_mat4x2.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat4x2.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat4x3.hpp
+	"type_mat.hpp"
+	"type_mat4x3.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat4x3.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat4x4.hpp
+	"type_mat.hpp"
+	"type_mat4x4.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/type_mat4x4.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_trigonometric.hpp
+	"func_trigonometric.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_trigonometric.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_exponential.hpp
+	"func_exponential.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_exponential.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_common.hpp
+	"_fixes.hpp"
+	"func_common.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_common.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_packing.hpp
+	"func_packing.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_packing.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_geometric.hpp
+	"func_geometric.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_geometric.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_matrix.hpp
+	"func_matrix.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_matrix.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_vector_relational.hpp
+	"_detail.hpp"
+	"func_vector_relational.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_vector_relational.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_integer.hpp
+	"func_integer.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_integer.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_noise.hpp
+	"func_noise.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/core/func_noise.inl
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/gtc/matrix_transform.hpp
+	"../glm.hpp"
+	"matrix_transform.inl"
+
+1360554668 /home/kodomo/workspace/OpenGL/raytracer/glm-0.9.2.7/glm/gtc/matrix_transform.inl
+
+1456816019 /home/kodomo/workspace/OpenGL/raytracer/include/Ray.h
+	"Camera.h"
+
+1456816153 source:/home/kodomo/workspace/OpenGL/raytracer/src/Ray.cpp
+	"Ray.h"
+
+1457675079 /home/kodomo/workspace/OpenGL/raytracer/include/variables.h
+	"glm/glm.hpp"
+	"gtc/matrix_transform.hpp"
+
+1456815746 source:/home/kodomo/workspace/OpenGL/raytracer/src/Camera.cpp
+	"Camera.h"
+
+1456815761 /home/kodomo/workspace/OpenGL/raytracer/include/Camera.h
+	"variables.h"
+
+1457328305 /home/kodomo/workspace/OpenGL/raytracer/include/Scene.h
+	"variables.h"
+	"Camera.h"
+	"Primitive.h"
+	"Raytracer.h"
+	<FreeImage.h>
+
+1457738111 /home/kodomo/workspace/OpenGL/raytracer/include/Raytracer.h
+	"Primitive.h"
+	"variables.h"
+
+1457671238 source:/home/kodomo/workspace/OpenGL/raytracer/src/Scene.cpp
+	"Scene.h"
+	"Raytracer.h"
+	<cstring>
+	<iostream>
+
+1457802607 source:/home/kodomo/workspace/OpenGL/raytracer/src/Raytracer.cpp
+	"Raytracer.h"
+	"variables.h"
+	<algorithm>
+

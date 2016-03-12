@@ -1,0 +1,55 @@
+::object (struct or class)
+	hold shape, size, material properties, and transforms
+	might hold some bounding box information or something
+	if I want to be able to call some functions on these (like intersect) then I 		should use a class
+	maybe merge with ::primitive, might not. They work closely together
+
+::light (probably a struct)
+	hold position and color
+
+::primitive
+	test for intersections with rays
+	more specifically: hold the required geometry primitives, and the equations for
+	checking for intersections
+
+::readfile
+	parse size into ::scene or ::camera or ::sampler or ::image
+
+::scene
+	has an array of objects
+
+::main
+	read input	
+
+::sampler
+	has an image w x h	I guess
+
+::camera
+	has a scene
+	has a position in a scene
+	has modelview transform function
+	creates rays (in the Berkeley spec)
+		Ray ray = RayThruPixel(cam, i, j)
+	
+
+::raytracer
+	find the closest object (how?)
+	get the color of a ray using the primitive class
+	call yourself recursively to get any subsequent reflections
+
+::film
+	Manage the image, store its colors
+
+notes: 
+unit tests perhaps
+NVidia Optix for speed
+
+
+The big advantage of a class over a struct is the constructor
+typedef Ray vec4?
+or struct?
+or class?
+2 types of rays : shadow rays (is there an intersection at all?) and primary rays
+				  (where are the intersections?)
+				  I guess primary rays are used for reflective surfaces and shadows
+				  for 
