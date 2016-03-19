@@ -33,7 +33,7 @@ vec3 Raytracer::trace(PrimaryRay& ray) {
 
     //For each light, iterate through all objects to see if something is blocking it. If not, add the light's color.
     for(int i=0; i<num_lights; i++) {
-        vec3 ray_direction = glm::normalize((lights[i].is_directional) ? lights[i].pos : (lights[i].pos - closest_intersect.point));
+        vec3 ray_direction = glm::normalize((lights[i]->is_directional) ? lights[i]->pos : (lights[i]->pos - closest_intersect.point));
         ShadowRay shadow((closest_intersect.point + ray_direction*0.01f), ray_direction);
 
         bool shadowed = false;
@@ -45,7 +45,7 @@ vec3 Raytracer::trace(PrimaryRay& ray) {
             }
         }
         if(!shadowed) {
-            color += get_lighting(lights[i], closest_intersect);
+            color += get_lighting(*lights[i], closest_intersect);
         }
     }
 
@@ -89,9 +89,9 @@ vec3 Raytracer::trace(PrimaryRay& ray) {
 vec3 Raytracer::get_lighting(Light light, Intersection intersect) {
     vec3 eye_to_object = intersect.point;
     vec3 object_to_light = light.is_directional ? light.pos : light.pos - intersect.point;
-    float attenuation = light.is_directional ? 1 : 9 / glm::dot(object_to_light, object_to_light);
+    float attenuation = light.is_directional ? 1 : 6 / glm::dot(object_to_light, object_to_light);
     vec3 normal = intersect.normal;
-    vec3 halfway = object_to_light + eye_to_object;
+    vec3 halfway = object_to_light - eye_to_object;
 
     halfway = glm::normalize(halfway);
     object_to_light = glm::normalize(object_to_light);
@@ -102,17 +102,15 @@ vec3 Raytracer::get_lighting(Light light, Intersection intersect) {
     vec3 diffuse = intersect.light.diffuse;
     vec3 lambertian_color = diffuse * light.color * brightness * attenuation;
 
-    float spec = pow(glm::max(glm::dot(normal, halfway), 0.0f), intersect.light.shininess);
-    ///fixme
-    //vec3 phong = intersect.light.specular * light.color * spec;
+    float highlight = pow(glm::max(glm::dot(normal, halfway), 0.0f), intersect.light.shininess);
+    vec3 phong = intersect.light.specular * light.color * highlight;
 
-
-    return lambertian_color + intersect.light.ambient ;//+ phong;
+    return lambertian_color + intersect.light.ambient + phong;
 }
 
 
 //gets made in camera's constructor
-Raytracer::Raytracer(Primitive** objects, int num_objects, Light* lights, int num_lights)
+Raytracer::Raytracer(Primitive** objects, int num_objects, Light** lights, int num_lights)
 {
     this->objects = objects;
     this->num_objects = num_objects;

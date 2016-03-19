@@ -9,10 +9,10 @@ class Raytracer
     public:
         Primitive** objects;
         int num_objects;
-        Light* lights;
+        Light** lights;
         int num_lights;
         //Image image;
-        Raytracer(Primitive**, int, Light*, int);
+        Raytracer(Primitive**, int, Light**, int);
         virtual ~Raytracer();
         vec3 trace(PrimaryRay&);
         vec3 get_lighting(Light, Intersection);

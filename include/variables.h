@@ -33,8 +33,6 @@ LightProperties(vec3 diff, vec3 amb, vec3 spec, vec3 emmis, int shiny) {
 }
 };
 
-
-
 struct Intersection {
     int distance;
     vec3 point;
