@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1458419781 source:/home/kodomo/workspace/OpenGL/raytracer/main.cpp
+1458423962 source:/home/kodomo/workspace/OpenGL/raytracer/main.cpp
 	<iostream>
 	<Primitive.h>
 	"Scene.h"
 	<FreeImage.h>
 	<string>
 
-1458419759 source:/home/kodomo/workspace/OpenGL/raytracer/src/Primitive.cpp
+1458421173 source:/home/kodomo/workspace/OpenGL/raytracer/src/Primitive.cpp
 	"Primitive.h"
 
 1458409698 /home/kodomo/workspace/OpenGL/raytracer/include/Primitive.h
@@ -269,14 +269,15 @@
 	"Primitive.h"
 	"variables.h"
 
-1457671238 source:/home/kodomo/workspace/OpenGL/raytracer/src/Scene.cpp
+1458420218 source:/home/kodomo/workspace/OpenGL/raytracer/src/Scene.cpp
 	"Scene.h"
 	"Raytracer.h"
 	<cstring>
 	<iostream>
 
-1458419809 source:/home/kodomo/workspace/OpenGL/raytracer/src/Raytracer.cpp
+1458423855 source:/home/kodomo/workspace/OpenGL/raytracer/src/Raytracer.cpp
 	"Raytracer.h"
 	"variables.h"
 	<algorithm>
+	<math.h>
 

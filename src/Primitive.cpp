@@ -10,7 +10,7 @@ Triangle::Triangle(vec3 vertex1, vec3 vertex2, vec3 vertex3, LightProperties pro
 {
     this->properties = properties;
     this->obj_transforms = obj_transforms;
-    this->normal = glm::normalize(glm::cross((v1 - v2), (v3 - v2)));
+    this->normal = glm::normalize(glm::cross((v3 - v2), (v1 - v2)));
 }
 
 /*

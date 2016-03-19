@@ -1,6 +1,7 @@
 #include "Raytracer.h"
 #include "variables.h"
 #include <algorithm>
+#include <math.h>
 
 struct closest_intersect {
     int index;
@@ -88,18 +89,25 @@ vec3 Raytracer::trace(PrimaryRay& ray) {
 vec3 Raytracer::get_lighting(Light light, Intersection intersect) {
     vec3 eye_to_object = intersect.point;
     vec3 object_to_light = light.is_directional ? light.pos : light.pos - intersect.point;
+    float attenuation = light.is_directional ? 1 : 9 / glm::dot(object_to_light, object_to_light);
     vec3 normal = intersect.normal;
-    vec3 halfway = eye_to_object + object_to_light;
+    vec3 halfway = object_to_light + eye_to_object;
 
     halfway = glm::normalize(halfway);
     object_to_light = glm::normalize(object_to_light);
     eye_to_object = glm::normalize(eye_to_object);
 
     float brightness = std::max( glm::dot(object_to_light, normal) , 0.0f );
-    vec3 diffuse = intersect.light.diffuse;
-    vec3 lambertian_color = diffuse * light.color * brightness;
 
-    return lambertian_color + intersect.light.ambient;
+    vec3 diffuse = intersect.light.diffuse;
+    vec3 lambertian_color = diffuse * light.color * brightness * attenuation;
+
+    float spec = pow(glm::max(glm::dot(normal, halfway), 0.0f), intersect.light.shininess);
+    ///fixme
+    //vec3 phong = intersect.light.specular * light.color * spec;
+
+
+    return lambertian_color + intersect.light.ambient ;//+ phong;
 }
 
 

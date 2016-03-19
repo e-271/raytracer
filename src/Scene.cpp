@@ -36,8 +36,10 @@ void Scene::render() {
 
 //Needs: an image object to write to, and a pointer to the spot being writ to, and it need to convert all the stuff to bytes (char)
 void Scene::record_color(vec3 color) {
-    ///we'll see if this works
     RGBQUAD pixel_color;
+    if(color.x > 1) color.x = 1;
+    if(color.y > 1) color.y = 1;
+    if(color.z > 1) color.z = 1;
     pixel_color.rgbRed = 255 * color.x;
     pixel_color.rgbBlue = 255 * color.y;
     pixel_color.rgbGreen = 255 * color.z;
