@@ -24,7 +24,8 @@ class Sphere : public Primitive
         //Pass by reference (PrimaryRay&) doesn't copy the object, but it also doesn't treat it like a pointer (INtersection*)
         bool intersects(PrimaryRay&, Intersection*);
         bool intersects(ShadowRay&);        //may not need a pass by reference, but it does save time
-
+    private:
+        float calculate_intersection(Ray&);
 };
 
 class Triangle : public Primitive
@@ -35,6 +36,9 @@ class Triangle : public Primitive
         Triangle(vec3, vec3, vec3, LightProperties, mat4);
         bool intersects(PrimaryRay&, Intersection*);
         bool intersects(ShadowRay&);
+    private:
+        float calculate_intersection(Ray&);
+        float calculate_intersection2(Ray&);
 };
 
 #endif // PRIMITIVE_H

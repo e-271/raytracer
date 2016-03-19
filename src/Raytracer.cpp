@@ -85,7 +85,7 @@ vec3 Raytracer::trace(PrimaryRay& ray) {
     return color;
 }
 
-vec3 Raytracer::get_lighting(Light light, Intersection intersect) {\
+vec3 Raytracer::get_lighting(Light light, Intersection intersect) {
     vec3 eye_to_object = intersect.point;
     vec3 object_to_light = light.is_directional ? light.pos : light.pos - intersect.point;
     vec3 normal = intersect.normal;
